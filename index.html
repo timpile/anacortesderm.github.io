@@ -1,1 +1,44 @@
-<h1>Anacortes Derm</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anacortes Dermatology Scheduling</title>
+</head>
+<body>
+  <header>
+    <h1>Anacortes Dermatology</h1>
+  </header>
+
+  <script>
+    (function (window, document) {
+      // Ez Scheduler configuration
+      window.__EzSchedulerConfig__ = {
+        apiKey: "",
+        primaryColor: "rgb(50, 124, 247)",
+  
+        // Optional settings:
+        // gradientColor: "linear-gradient(90deg, rgba(50, 124, 247, 1) 0%, rgba(50, 154, 247, 1) 75%, rgba(50, 144, 247, 0.8) 100%)",
+        initiallyOpened: true,
+        hideFloatingButton: true,
+        // containerId: "ez-scheduler-container",
+        onLoad: () => { console.log("EzScheduler widget initialized"); }
+      };
+  
+      // Inject the Ez Scheduler script
+      var s = document.createElement("script");
+      s.type = "text/javascript";
+      s.async = true;
+  
+      var int = (window.__EzSchedulerConfig__.internal = {
+        s: "https://ezschedulerdev.ezinfra.net",
+      });
+      s.src = int.s + "/bootstrap.js";
+  
+      var before = document.getElementsByTagName("script")[0];
+      before.parentNode.insertBefore(s, before);
+    })(window, document);
+  </script>
+
+</body>
+</html>
