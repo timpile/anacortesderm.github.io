@@ -4,16 +4,37 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Anacortes Dermatology Scheduling</title>
+
+  <style>
+    /* Make the container fill the whole window */
+    #ez-scheduler-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 9999;
+      background: white; /* optional, to ensure a clean background */
+    }
+  </style>
 </head>
 <body>
   <header>
     <h1>Anacortes Dermatology</h1>
   </header>
 
+  <div id="ez-scheduler-container"></div>
+
   <script>
     (function (window, document) {
       window.__EzSchedulerConfig__ = {
         apiKey: "Y2ZkNzY4NzktZjMyZS00Y2RiLThjMGEtYmYyZjAxN2IwYzU4",
+        // primaryColor: "rgb(50, 124, 247)",
+        // gradientColor: "linear-gradient(90deg, rgba(50, 124, 247, 1) 0%, rgba(50, 154, 247, 1) 75%, rgba(50, 144, 247, 0.8) 100%)",
+        initiallyOpened: false,
+        hideFloatingButton: true,
+        containerId: "ez-scheduler-container",
+        // onLoad: () => { console.log("Widget initialized"); }
       };
     
       var s = document.createElement("script");
